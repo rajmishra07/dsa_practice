@@ -560,4 +560,36 @@ int main()
 
 
 
+19) sum and multiplication of the digits of the number 
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+int main()
+{   
+    int n,q,r;
+   cout<<"Enter the number: ";
+   cin>>n;
+   int sum =0;
+   int mult=1;
+   while (n!=0){
+       r = n %10;
+       q = n/10;
+       n = q;
+       sum = sum + r;
+       mult = mult * r;
+   }
+  cout<<"The sum of the digits of the number is :"<<sum<<endl;
+  cout<<"The multiplication of the digits of the number :"<<mult;
+    return 0;
+}
+
+
+
+
+
+
+
+
 
