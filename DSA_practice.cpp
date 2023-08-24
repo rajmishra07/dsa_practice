@@ -1,8 +1,8 @@
    ______________________#Patterns in DSA 
 
-	1111
-	2222
-	3333
+	111
+	222
+	333
 
 *******************************************************************************/
 #include <iostream>
@@ -513,14 +513,66 @@ int main()
        * * 
          *
 
+*******************************************************************************/
+#include <iostream>
 
-         
-
-
-
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"Enter the vlue of n = ";
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        for(int space=1; space<=i-1;space++){
+            cout<<" ";
+        }
+        for(int j=1; j<=n-i+1; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
 
 
 18)
+
+   1 1 1 1 
+     2 2 2
+       3 3
+         4
+
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"Enter the vlue of n = ";
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        for(int space=1; space<=i-1;space++){
+            cout<<" ";
+        }
+        for(int j=1; j<=n-i+1; j++){
+            cout<<i;
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+     
+19)
+   1 2 3 4
+     2 3 4 
+       3 4
+         4
+
+
+
+20)
 
    *
   * *
@@ -560,7 +612,10 @@ int main()
 
 
 
-19) sum and multiplication of the digits of the number 
+
+
+
+21) sum and multiplication of the digits of the number 
 
 *******************************************************************************/
 #include <iostream>
@@ -586,10 +641,87 @@ int main()
 }
 
 
+22) the sum of even numbers upto n numbers
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    int sum=0;
+    cout<<"Enter the number: ";
+    cin>>n;
+    for(int i=1;i<=n;i++){
+        if (i%2==0){
+        sum = sum+i;
+        }
+    }
+     cout<<"the sum is:"sum;
+    
+    return 0;
+}
+
+23) prime number
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   
+    int n,count=1;
+    cout<<"Enter the number :";
+    cin>>n;
+    for(int i=2;i<=n/2;i++){
+        if(n%i==0){
+            count++;
+        }
+    }
+    if(count==1){
+        cout<<"number is prime number :"<<n;
+    }
+    else{
+    cout<<"number is not a prime number :"<<n;
+        
+    }
+    return 0;
+}
 
 
+24) interval prime numbers
 
+*******************************************************************************/
+#include <iostream>
+using namespace std;
 
+int main()
+{   
+    int n1,n2;
+    cout<<"Enter the number 1 :";
+    cin>>n1;
+    cout<<"Enter the number 2 :";
+    cin>>n2;
+    
+    for(int i=n1; i<=n2;i++){
+        if (i == 1 || i == 0)
+            continue;
+        int count=1;
+        for(int j = 2;j<=i/2;j++){
+            if(i%j==0){
+                count++;
+                break;
+            }
+        }
+        if(count == 1){
+            cout<<i<<endl;
+        }
+        
+    }
+    return 0;
+}
 
-
-
+25)fabonaci series
